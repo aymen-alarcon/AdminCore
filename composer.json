@@ -1,0 +1,10 @@
+{
+    "name": "aymen/admin-core",
+    "description": "hey there",
+    "autoload": {
+        "psr-4": {
+            "Aymen\\AdminCore\\": "src/"
+        }
+    },
+    "require": {}
+}
