@@ -1,49 +1,4 @@
-<!DOCTYPE html>
-<html class="light" lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Login - PHP MVC Application</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#137fec",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101922",
-                    },
-                    fontFamily: {
-                        "display": ["Inter"]
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
-</head>
-<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white transition-colors duration-300">
-    <div class="flex min-h-screen flex-col">
-        <header
-            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#dbe0e6] dark:border-[#2a343d] bg-white dark:bg-[#1a252f] px-10 py-3">
-            <div class="flex items-center gap-4">
-                <div class="text-primary size-6">
-                    <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
-                    </svg>
-                </div>
-                <h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">
-                    AuthSystem MVC</h2>
-            </div>
-            <div class="flex items-center gap-4">
-                <a class="text-sm font-medium hover:text-primary" href="#">Help</a>
-            </div>
-        </header>
+<?php require "includes/header.php"; ?>
         <main class="flex flex-1 items-center justify-center p-6">
             <div
                 class="w-full max-w-[480px] rounded-xl border border-[#dbe0e6] dark:border-[#2a343d] bg-white dark:bg-[#1a252f] p-8 shadow-sm">
@@ -111,14 +66,4 @@
                 </div>
             </div>
         </main>
-        <footer
-            class="py-6 px-10 border-t border-[#dbe0e6] dark:border-[#2a343d] flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-[#617589] text-xs">© 2024 AuthSystem MVC. All rights reserved.</p>
-            <div class="flex gap-6">
-                <a class="text-[#617589] text-xs hover:text-primary" href="#">Privacy Policy</a>
-                <a class="text-[#617589] text-xs hover:text-primary" href="#">Terms of Service</a>
-            </div>
-        </footer>
-    </div>
-</body>
-</html>
+<?php require "includes/footer.php"; ?>
