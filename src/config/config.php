@@ -1,0 +1,20 @@
+<?php
+
+class DatabaseConnection{
+    private $conn;
+
+    function __construct($conn)
+    {
+        $this->conn = $conn;
+    }
+
+    function establishConnection(){
+        try {
+            $dsn = new PDO("mysql:host=localhost;dbname=gestion_users;", "root", "");
+            $dsn->setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            echo $dsn->errorCode();
+        }
+    }
+}
