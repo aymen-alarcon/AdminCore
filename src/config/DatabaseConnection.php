@@ -1,13 +1,6 @@
 <?php
 
 class DatabaseConnection{
-    private $conn;
-
-    function __construct($conn)
-    {
-        $this->conn = $conn;
-    }
-
     function establishConnection(){
         try {
             $dsn = new PDO("mysql:host=localhost;dbname=gestion_users;", "root", "");

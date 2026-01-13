@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Sign Up | PHP MVC App</title>
+    <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet" />
@@ -34,14 +35,14 @@
             <div class="size-6">
                 <span class="material-symbols-outlined text-3xl">school</span>
             </div>
-            <h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">EduPortal
-            </h2>
+            <a href="main.php">
+                <h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">AdminCore</h2>
+            </a>
         </div>
         <div class="flex gap-4 items-center">
-            <span class="text-sm text-gray-500 hidden md:block">MVC Authentication System</span>
             <button
                 class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal">
-                <span class="truncate">Log In</span>
+                <a href="login.php" class="truncate">Log In</a>
             </button>
         </div>
     </header>

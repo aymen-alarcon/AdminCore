@@ -9,20 +9,6 @@
                     <p class="text-[#617589] dark:text-gray-400 text-center text-base mt-2">Login to manage your
                         dashboard</p>
                 </div>
-                <div class="mb-6">
-                    <div
-                        class="flex flex-col items-start justify-between gap-4 rounded-lg border border-red-200 bg-red-50 dark:bg-red-900/20 dark:border-red-800/50 p-4">
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-red-500">error</span>
-                            <div class="flex flex-col gap-1">
-                                <p class="text-red-800 dark:text-red-200 text-sm font-bold leading-tight">Invalid
-                                    credentials</p>
-                                <p class="text-red-700 dark:text-red-300 text-xs font-normal leading-normal">Please
-                                    check your email and password and try again.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <form action="/login" class="space-y-6" method="POST">
                     <div class="flex flex-col gap-1">
                         <label class="flex flex-col">
@@ -36,32 +22,23 @@
                     <div class="flex flex-col gap-1">
                         <label class="flex flex-col">
                             <div class="flex justify-between items-center pb-2">
-                                <p class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal">Password
+                                <p class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal">
+                                    Password
                                 </p>
-                                <a class="text-xs text-primary hover:underline" href="#">Forgot password?</a>
                             </div>
                             <input
                                 class="form-input flex w-full min-w-0 flex-1 rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe0e6] dark:border-[#3a444d] bg-white dark:bg-[#101922] h-12 placeholder:text-[#617589] p-[15px] text-base font-normal leading-normal transition-all"
                                 name="password" placeholder="••••••••" required="" type="password" />
                         </label>
                     </div>
-                    <div class="flex items-center gap-2 px-1">
-                        <input
-                            class="size-4 rounded border-[#dbe0e6] dark:border-[#3a444d] text-primary focus:ring-primary bg-white dark:bg-[#101922]"
-                            id="remember" type="checkbox" />
-                        <label class="text-sm text-[#617589] dark:text-gray-400" for="remember">Remember me for 30
-                            days</label>
-                    </div>
-                    <button
-                        class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal transition-colors"
-                        type="submit">
+                    <button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal transition-colors" type="submit">
                         <span class="truncate">Sign In</span>
                     </button>
                 </form>
                 <div class="mt-8 border-t border-[#f0f2f4] dark:border-[#2a343d] pt-6 text-center">
                     <p class="text-[#617589] dark:text-gray-400 text-sm">
                         Don't have an account?
-                        <a class="text-primary font-bold hover:underline ml-1" href="/register">Create an account</a>
+                        <a class="text-primary font-bold hover:underline ml-1" href="signup.php">Create an account</a>
                     </p>
                 </div>
             </div>

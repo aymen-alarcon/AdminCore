@@ -1,4 +1,4 @@
-<?php require "includes/header.php"; ?>
+    <?php require "includes/header.php"; ?>
         <main class="flex-grow w-full max-w-[1280px] mx-auto px-6 md:px-20 py-10">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
                 <div class="flex flex-col gap-2">
@@ -209,4 +209,4 @@
                 </div>
             </div>
         </main>
-<?php require "includes/footer.php"; ?>
+    <?php require "includes/footer.php"; ?>
