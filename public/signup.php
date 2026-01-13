@@ -57,21 +57,6 @@
                             placeholder="••••••••" required="" type="password" />
                     </div>
                 </div>
-                <div class="flex flex-col gap-2 pb-4">
-                    <label class="text-[#111418] dark:text-white text-base font-medium leading-normal">Role
-                        Selection</label>
-                    <div class="relative">
-                        <span
-                            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">badge</span>
-                        <select
-                            class="form-select flex w-full min-w-0 rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark h-12 pl-12 pr-4 text-base font-normal appearance-none transition-all">
-                            <option value="user">User / Student</option>
-                            <option value="admin">Administrator / Faculty</option>
-                        </select>
-                        <span
-                            class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
-                    </div>
-                </div>
                 <button
                     class="flex w-full items-center justify-center rounded-lg h-12 px-4 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal shadow-lg transition-all transform active:scale-[0.98]"
                     type="submit">

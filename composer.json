@@ -3,7 +3,7 @@
     "description": "hey there",
     "autoload": {
         "psr-4": {
-            "Aymen\\AdminCore\\": "src/"
+            "App\\": "src/"
         }
     },
     "require": {}
