@@ -30,13 +30,17 @@ switch ($uri) {
         break;
 
     case '/main':
+        if (!isset($_SESSION["id"])) {
+            header("Location: /login");
+        }
+        
         $controller = new AuthController($conn);
         $controller->mainPage();
         break;
 
     case '/':
         if (isset($_SESSION['id'])) {
-            require_once __DIR__ . '/src/views/login.php';
+            require_once __DIR__ . '/src/views/main.php';
         } else {
             require_once __DIR__ . '/src/views/login.php';
             exit;

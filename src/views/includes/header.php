@@ -45,7 +45,11 @@
         <div class="flex gap-4 items-center">
             <button
                 class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal">
-                <a href="login.php" class="truncate">Log In</a>
+                <?php if(!isset($_SESSION["id"])):?>
+                    <a href="/login" class="truncate">Log In</a>
+                <?php else: ?>
+                    <a href="/logout" class="truncate">Log out</a>
+                <?php endif;?>
             </button>
         </div>
     </header>

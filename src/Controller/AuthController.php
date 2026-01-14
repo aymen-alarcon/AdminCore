@@ -34,7 +34,7 @@ class AuthController{
         $handler = new User($this->conn);
         $handler->setEmail($_POST["email"]);
         $handler->setPassword($_POST["password"]);
-        $handler->loginUser();
+        $user = $handler->loginUser();
         header("Location: /main");
         exit;
     }
