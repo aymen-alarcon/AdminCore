@@ -1,4 +1,8 @@
 <?php
+namespace App\config;
+
+use PDO;
+use PDOException;
 
 class DatabaseConnection{
     function establishConnection(){
@@ -9,5 +13,6 @@ class DatabaseConnection{
             echo $e->getMessage();
             echo $dsn->errorCode();
         }
+        return $dsn;
     }
 }

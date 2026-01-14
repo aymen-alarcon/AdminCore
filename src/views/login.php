@@ -1,4 +1,4 @@
-<?php require "includes/header.php"; ?>
+<?php require __DIR__ . "/includes/header.php"; ?>
         <main class="flex flex-1 items-center justify-center p-6">
             <div
                 class="w-full max-w-[480px] rounded-xl border border-[#dbe0e6] dark:border-[#2a343d] bg-white dark:bg-[#1a252f] p-8 shadow-sm">
@@ -9,7 +9,7 @@
                     <p class="text-[#617589] dark:text-gray-400 text-center text-base mt-2">Login to manage your
                         dashboard</p>
                 </div>
-                <form action="/login" class="space-y-6" method="POST">
+                <form action="/loginProcess" class="space-y-6" method="POST">
                     <div class="flex flex-col gap-1">
                         <label class="flex flex-col">
                             <p class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal pb-2">Email
@@ -38,7 +38,7 @@
                 <div class="mt-8 border-t border-[#f0f2f4] dark:border-[#2a343d] pt-6 text-center">
                     <p class="text-[#617589] dark:text-gray-400 text-sm">
                         Don't have an account?
-                        <a class="text-primary font-bold hover:underline ml-1" href="signup.php">Create an account</a>
+                        <a class="text-primary font-bold hover:underline ml-1" href="/signup">Create an account</a>
                     </p>
                 </div>
             </div>

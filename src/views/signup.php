@@ -1,4 +1,4 @@
-<?php require "includes/header.php"; ?>
+<?php require __DIR__ . "/includes/header.php"; ?>
     <main class="flex-1 flex items-center justify-center p-6">
         <div
             class="w-full max-w-[480px] bg-white dark:bg-[#1a242f] rounded-xl shadow-xl border border-gray-100 dark:border-gray-800 overflow-hidden">
@@ -9,7 +9,7 @@
                 <p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal px-8 text-center pt-2">
                     Enter your details to register for the platform</p>
             </div>
-            <form class="p-8 space-y-4" action="../src/Controller/auth" method="POST">
+            <form class="p-8 space-y-4" action="/registerProcess" method="POST">
                 <div class="flex flex-col gap-2">
                     <label class="text-[#111418] dark:text-white text-base font-medium leading-normal">first Name</label>
                     <div class="relative">
@@ -38,7 +38,7 @@
                             class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">mail</span>
                         <input
                             class="form-input flex w-full min-w-0 rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark h-12 pl-12 pr-4 placeholder:text-gray-400 text-base font-normal transition-all"
-                            placeholder="name@example.com" required="" type="email" />
+                            placeholder="name@example.com" required="" name="email" type="email" />
                     </div>
                 </div>
                 <div class="flex flex-col gap-2">
@@ -48,7 +48,7 @@
                             class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">lock</span>
                         <input
                             class="form-input flex w-full min-w-0 rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark h-12 pl-12 pr-12 placeholder:text-gray-400 text-base font-normal transition-all"
-                            placeholder="••••••••" required="" type="password" />
+                            placeholder="••••••••" required="" name="password" type="password" />
                         <button
                             class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary transition-colors"
                             type="button">
@@ -75,7 +75,7 @@
                 <div class="pt-6 text-center">
                     <p class="text-sm text-gray-600 dark:text-gray-400">
                         Already have an account?
-                        <a class="text-primary font-bold hover:underline ml-1" href="#">Log In</a>
+                        <a class="text-primary font-bold hover:underline ml-1" href="/login">Log In</a>
                     </p>
                 </div>
             </form>

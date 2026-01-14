@@ -1,19 +1,23 @@
 <?php
-session_start();
+namespace App\Models;
+
+use App\config;
+use PDO;
+
 class User{
-    private PDO $conn;
+    private ?PDO $conn;
     private ?int $id;
-    private ?string $firstName;
-    private ?string $lastName;
+    private ?string $first_name;
+    private ?string $last_name;
     private ?string $email;
     private ?string $password;
 
-    function __construct($conn = NUll, $id = NULL, $firstName = NULL, $lastName = NULL, $email = NULL, $password = NUll)
+    function __construct($conn = NULL, $id = NULL, $first_name = NULL, $last_name = NULL, $email = NULL, $password = NUll)
     {
         $this->conn = $conn;
         $this->id = $id;
-        $this->firstName = $firstName;
-        $this->lastName = $lastName;
+        $this->first_name = $first_name;
+        $this->last_name = $last_name;
         $this->email = $email;
         $this->password = $password;
     }
@@ -28,24 +32,24 @@ class User{
         $this->id = $id;
     }
 
-    public function getFirstName()
+    public function getFirst_name()
     {
-        return $this->firstName;
+        return $this->first_name;
     }
 
-    public function setFirstName($firstName)
+    public function setFirst_name($first_name)
     {
-        $this->firstName = $firstName;
+        $this->first_name = $first_name;
     }
 
-    public function getLastName()
+    public function getLast_name()
     {
-        return $this->lastName;
+        return $this->last_name;
     }
 
-    public function setLastName($lastName)
+    public function setLast_name($last_name)
     {
-        $this->lastName = $lastName;
+        $this->last_name = $last_name;
     }
 
     public function getEmail()
@@ -71,8 +75,8 @@ class User{
     function createUser(){
         $sql = "INSERT INTO users (first_name, last_name, email, password, date_creation) Values (:first_name, :last_name, :email, :password, now())";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bindValue(":first_name", $this->getFirstName());
-        $stmt->bindValue(":last_name", $this->getLastName());
+        $stmt->bindValue(":first_name", $this->getFirst_name());
+        $stmt->bindValue(":last_name", $this->getLast_name());
         $stmt->bindValue(":email", $this->getEmail());
         $stmt->bindValue(":password", $this->getPassword());
         $stmt->execute();
@@ -81,10 +85,12 @@ class User{
     }
 
     function loginUser(){
-        $sql = "SELECT * FROM users WHERE id = :id";
+        $sql = "SELECT * FROM users WHERE email = :email";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bindValue(":id", $this->getId());
+        $stmt->bindValue(":email", $this->getEmail());
+        $stmt->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE,self::class);
         $stmt->execute();
-        $user = $stmt->fetchAll(PDO::FETCH_CLASS);
+        $user = $stmt->fetch();
+        $_SESSION["id"] = $user->getFirst_name();
     }
 }
