@@ -3,8 +3,7 @@
             <div
                 class="w-full max-w-[480px] rounded-xl border border-[#dbe0e6] dark:border-[#2a343d] bg-white dark:bg-[#1a252f] p-8 shadow-sm">
                 <div class="mb-8">
-                    <h1
-                        class="text-[#111418] dark:text-white tracking-light text-[32px] font-bold leading-tight text-center">
+                    <h1 class="text-[#111418] dark:text-white tracking-light text-[32px] font-bold leading-tight text-center">
                         Welcome Back</h1>
                     <p class="text-[#617589] dark:text-gray-400 text-center text-base mt-2">Login to manage your
                         dashboard</p>
@@ -14,8 +13,7 @@
                         <label class="flex flex-col">
                             <p class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal pb-2">Email
                                 Address</p>
-                            <input
-                                class="form-input flex w-full min-w-0 flex-1 rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe0e6] dark:border-[#3a444d] bg-white dark:bg-[#101922] h-12 placeholder:text-[#617589] p-[15px] text-base font-normal leading-normal transition-all"
+                            <input class="form-input flex w-full min-w-0 flex-1 rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe0e6] dark:border-[#3a444d] bg-white dark:bg-[#101922] h-12 placeholder:text-[#617589] p-[15px] text-base font-normal leading-normal transition-all"
                                 name="email" placeholder="Enter your email" required="" type="email" />
                         </label>
                     </div>
@@ -26,8 +24,7 @@
                                     Password
                                 </p>
                             </div>
-                            <input
-                                class="form-input flex w-full min-w-0 flex-1 rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe0e6] dark:border-[#3a444d] bg-white dark:bg-[#101922] h-12 placeholder:text-[#617589] p-[15px] text-base font-normal leading-normal transition-all"
+                            <input class="form-input flex w-full min-w-0 flex-1 rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe0e6] dark:border-[#3a444d] bg-white dark:bg-[#101922] h-12 placeholder:text-[#617589] p-[15px] text-base font-normal leading-normal transition-all"
                                 name="password" placeholder="••••••••" required="" type="password" />
                         </label>
                     </div>

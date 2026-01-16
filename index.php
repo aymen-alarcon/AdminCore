@@ -1,62 +1,27 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
-ini_set('display_errors', 1);
 
 session_start();
 
 use App\Controller\AuthController;
 use App\config\DatabaseConnection;
+use App\core\Router;
 
 $db = new DatabaseConnection();
 $conn = $db->establishConnection();
 
-$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-switch ($uri) {
-    case '/login':
-        $controller = new AuthController($conn);
-        $controller->loginForm();
-        break;
+$routing = new Router();
 
-    case '/signup':
-        $controller = new AuthController($conn);
-        $controller->signupForm();
-        break;
+$controller = new AuthController($conn);
 
-    case '/logout':
-        $controller = new AuthController($conn);
-        $controller->logOutForm();
-        break;
+$routing->get("/login", [$controller, "loginForm"]);
+$routing->get("/signup", [$controller, "signupForm"]);
+$routing->get("/logout", [$controller, "logOutForm"]);
+$routing->get("/main", [$controller, "mainPage"]);
+$routing->post("/loginProcess", [$controller, "loginUser"]);
+$routing->post("/registerProcess", [$controller, "createUser"]);
+$routing->get("/", [$controller, "loginForm"]);
 
-    case '/main':
-        if (!isset($_SESSION["id"])) {
-            header("Location: /login");
-        }
-        
-        $controller = new AuthController($conn);
-        $controller->mainPage();
-        break;
-
-    case '/':
-        if (isset($_SESSION['id'])) {
-            require_once __DIR__ . '/src/views/main.php';
-        } else {
-            require_once __DIR__ . '/src/views/login.php';
-            exit;
-        }
-        break;
-
-    case "/loginProcess":
-        $controller = new AuthController($conn);
-        $controller->loginUser();
-
-    case "/registerProcess":
-        $controller = new AuthController($conn);
-        $controller->createUser();
-
-    default:
-        http_response_code(404);
-        echo "404 Not Found";
-        break;
-}
+echo $routing->resolve();
